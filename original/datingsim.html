@@ -1,0 +1,534 @@
+<html>
+<head>
+<style>
+</style>
+</head>
+<title>Shrek Dating Sim</title>
+<body>
+<button onclick = "conversation();update()">Continue</button>
+<table>
+<tr>
+<td>
+<canvas id = "board" width = "1250" height = "470"></canvas>
+<td>
+</tr>
+<tr>
+<td>
+<div style = "text-align: center">
+<canvas id = "board1" width = "800" height = "80" style = "background: pink"></canvas>
+</div>
+</td>
+</tr>
+</table>
+</canvas>
+<script>
+document.body.style.background = "url('https://wallpaperaccess.com/full/5014131.jpg')"
+document.body.style.backgroundSize = "100% 100%";
+var canvas = document.getElementById("board");
+var speechbox = document.getElementById("board1");
+var speech = speechbox.getContext("2d");
+speech.font = "20px Consolas";
+var dont = 0;
+var fail = 0;
+var explosion = new Image();
+explosion.src = "https://snipstock.com/assets/cdn/png/7be30af96cd8d428957d53147de3d631.png";
+var pass = 0;
+var noanswer = 0;
+speech.fillStyle = "black";
+var ctx = canvas.getContext("2d");
+var shrek = new Image();
+var angryshrek = new Image();
+var orange = new Image();
+orange.src = "https://i.kym-cdn.com/photos/images/facebook/001/337/786/426.png";
+angryshrek.src = "https://pngarchive.com/public/uploads/preview/angry-shrek-png-11635354925bdii9mdo4d.png";
+var times = 0;
+shrek.src = "https://cdn141.picsart.com/305171436153211.png";
+window.onload = function()
+{ 
+  ctx.drawImage(shrek,350,0,550,550);
+  speech.fillText("(I can't hold it in anymore. I must confess to senpai!)",100,50);
+}
+function conversation()
+{
+  if (times==0)
+  {
+    if (confirm("Confess to senpai in front of everyone?"))
+    {
+      const myTimeout = setInterval(embarrass, 100);
+      function embarrass()
+      {
+        speech.clearRect(0,0,canvas.width, canvas.height);
+        if (times==1)
+        {
+            speech.clearRect(0,0,canvas.width, canvas.height);
+          ctx.drawImage(shrek,350,0,550,550);
+          speech.fillText("You: Senpai!! I like you!!", 250, 50);
+        }
+        else if (times==2)
+        {
+           speech.clearRect(0,0,canvas.width, canvas.height);
+          ctx.drawImage(shrek,350,0,550,550);
+          speech.fillText("Everyone starts to point and stare at you, mumuring to each other.", 50,50);
+        }
+        else if (times==3)
+        {
+            speech.clearRect(0,0,canvas.width, canvas.height);
+          ctx.drawImage(angryshrek,350,0,550,550);
+          speech.fillText("Shrek: GET AWAY FROM ME BAKA!!!!", 200,50);
+        }
+        else 
+        {
+          ctx.drawImage(angryshrek,350,0,550,550);
+          speech.fillText("~~Game Over~~", 320,50);
+        }
+      }
+    }
+    else
+    {
+      const myTimeout = setInterval(talk,100);
+      function talk()
+      {
+        if (times==1)
+        {
+          speech.clearRect(0,0,canvas.width, canvas.height);
+          ctx.drawImage(shrek,350,0,550,550);
+          speech.fillText("You: Senpai, can we talk in private somewhere else?", 100,50);
+        }
+        else if (times==2)
+        {
+          speech.clearRect(0,0,canvas.width, canvas.height);
+          ctx.drawImage(shrek,350,0,550,550);
+          speech.fillText("Shrek: Sure!", 300,50);
+        }
+        else if (times==3)
+        {
+          speech.clearRect(0,0,canvas.width, canvas.height);
+          document.body.style.background = "url('https://wallpapercave.com/wp/wp4720658.jpg')";
+          document.body.style.backgroundSize = "100% 100%";
+          ctx.drawImage(shrek,350,0,550,550);
+          speech.fillText("You bring Shrek to the school yard.", 200,50);
+        }
+        else if (times==4)
+        {
+          speech.clearRect(0,0,canvas.width, canvas.height);
+          ctx.drawImage(shrek,350,0,550,550);
+          speech.fillText("You: Sen...senpai...", 300,50);
+        }
+        else if (times==5)
+        {
+          speech.clearRect(0,0,canvas.width, canvas.height);
+          ctx.drawImage(shrek,350,0,550,550);
+          speech.fillText("You: I like you!", 300,50);
+        }
+        else if (times==6)
+        {
+          speech.clearRect(0,0,canvas.width, canvas.height);
+          ctx.drawImage(shrek,350,0,550,550);
+          speech.fillText("Shrek: ...!", 300,50);
+        }
+        else if (times==7)
+        {
+          speech.clearRect(0,0,canvas.width, canvas.height);
+          ctx.drawImage(shrek,350,0,550,550);
+          speech.fillText("Shrek: ...", 300,50);
+        }
+        else if (times==8)
+        {
+          speech.clearRect(0,0,canvas.width, canvas.height);
+          ctx.drawImage(shrek,350,0,550,550);
+          speech.fillText("Shrek: I...", 300,50);
+        }
+        else if (times==9)
+        {
+          speech.clearRect(0,0,canvas.width, canvas.height);
+          ctx.drawImage(shrek,350,0,550,550);
+          speech.fillText("Shrek: I like you too!!", 300,50);
+        }
+        else if (times==10)
+        {
+         speech.clearRect(0,0,canvas.width, canvas.height);
+          ctx.drawImage(shrek,350,0,550,550);
+          speech.fillText("Shrek: But...", 300,50);
+        }
+        else if (times==11)
+        {
+          speech.clearRect(0,0,canvas.width, canvas.height);
+          ctx.drawImage(shrek,350,0,550,550);
+          speech.fillText("You: But what?", 300,50);
+        } 
+        else if (times==12)
+        {
+          speech.clearRect(0,0,canvas.width, canvas.height);
+          ctx.drawImage(shrek,350,0,550,550);
+          speech.fillText("Shrek: I'm too ugly for you...", 300,50);
+        }
+        else if (times==13)
+        {
+          speech.clearRect(0,0,canvas.width, canvas.height);
+          ctx.drawImage(shrek,350,0,550,550);
+          speech.fillText("You: That's not true! You're really pretty!", 200,50);
+        } 
+        else if (times==14)
+        {
+          speech.clearRect(0,0,canvas.width, canvas.height);
+          ctx.drawImage(shrek,350,0,550,550);
+          speech.fillText("Shrek: I'm so happy...", 300,50); 
+        }
+        else if (times==15)
+        {
+          speech.clearRect(0,0,canvas.width, canvas.height);
+          ctx.drawImage(shrek,350,0,550,550);
+          speech.fillText("Shrek: But I just wish I could be human again.", 200,50);
+        }
+        else if (times==16)
+        {
+          speech.clearRect(0,0,canvas.width, canvas.height);
+          ctx.drawImage(shrek,350,0,550,550);
+          speech.fillText("Shrek: You see, I was turned into an ogre by a wizard...", 100,50);
+        }
+        else if (times==17)
+        {
+          speech.clearRect(0,0,canvas.width, canvas.height);
+          ctx.drawImage(shrek,350,0,550,550);
+          speech.fillText("Shrek: Joe M Ligma.", 300,50)
+        }
+        else if (times==18)
+        {
+          speech.clearRect(0,0,canvas.width, canvas.height);
+          ctx.drawImage(shrek,350,0,550,550);
+          speech.fillText("Shrek: And the only way to reverse the curse...", 200,50);
+        }
+        else if (times==19)
+        {
+          speech.clearRect(0,0,canvas.width, canvas.height);
+          ctx.drawImage(shrek,350,0,550,550);
+          speech.fillText("Shrek: Is by eating the Ligma fruit!", 200,50);
+        }
+        else if (times==20)
+        {
+          speech.clearRect(0,0,canvas.width, canvas.height);
+          ctx.drawImage(shrek,350,0,550,550);
+          speech.fillText("Shrek: Will you help me get the Ligma fruit?", 150,50);
+        }
+        else if (times==21)
+        {
+          if (confirm("Help Shrek get the Ligma fruit?"))
+          {
+            times++;
+            const myTimeout = setInterval(help, 100);
+            function help() 
+            {
+              if (times==22)
+              {
+                speech.clearRect(0,0,canvas.width, canvas.height);
+                ctx.drawImage(shrek,350,0,550,550);
+                times = times+3;
+                speech.fillText("You: Sure! I'll do it for senpai!", 200,50);
+              }
+            }
+          }
+          else
+          {
+            times++;
+            dont++;
+            const myTimeout = setInterval(donthelp, 100);
+            function donthelp()
+            {
+              if (times==22)
+              {
+                speech.clearRect(0,0,canvas.width, canvas.height);
+                ctx.drawImage(shrek,350,0,550,550);
+                speech.fillText("You: Nah, I'll pass.", 300,50);
+              }
+            }
+          }
+        }
+        else if (times==26)
+        {
+          speech.clearRect(0,0,canvas.width,canvas.height);
+          ctx.drawImage(shrek,350,0,550,550);
+          speech.fillText("Shrek: Thank you so much!", 250,50);
+        }
+        else if (times==27)
+        {
+          speech.clearRect(0,0,canvas.width, canvas.height);
+          ctx.drawImage(shrek,350,0,550,550);
+          speech.fillText("Shrek: You can find the Ligma fruit in the mines on Goteem island!", 50,50);
+        }
+        else if (times==28)
+        {
+          document.body.style.background = "url('https://i.pinimg.com/originals/ad/1f/59/ad1f594c7dd7d5d5b0d89c3632a47934.jpg')";
+          document.body.style.backgroundSize = "100% 100%";
+          ctx.clearRect(0,0,canvas.width,canvas.height);
+          speech.clearRect(0,0,canvas.width,canvas.height);
+          speech.fillText("Later that day, you head to Ligma island, in search of the Ligma fruit.", 15,50);
+        }
+        else if (times==29)
+        {
+          speech.clearRect(0,0,canvas.width, canvas.height);
+          speech.fillText("You: Sheesh, this place is big!",200,50);
+        }
+        else if (times==30)
+        {
+          ctx.drawImage(orange,350,0,550,550);
+          speech.clearRect(0,0,canvas.width, canvas.height);
+          speech.fillText("Knuckles: What brings you here, my child?", 150,50); 
+        }
+        else if (times==31)
+        {
+          speech.clearRect(0,0,canvas.width,canvas.height);
+          speech.fillText("You: I'm here to find the Ligma fruit.",200,50);
+        }
+        else if (times==32)
+        {
+          speech.clearRect(0,0,canvas.width,canvas.height);
+          speech.fillText("You: Who are you?", 300,50);
+        }
+        else if (times==33)
+        {
+          speech.clearRect(0,0,canvas.width,canvas.height);
+          speech.fillText("Knuckles: I am the guardian of the Ligma fruit.",150,50);
+        }
+        else if (times==34)
+        {
+          speech.clearRect(0,0,canvas.width,canvas.height);
+          speech.fillText("You: Guardian?",300,50)
+        }
+        else if (times==35)
+        {
+          speech.clearRect(0,0,canvas.width,canvas.height);
+          speech.fillText("Knuckles: I only give the Ligma fruit to those I deem worthy.",80,50);
+        }
+        else if (times==36)
+        {
+          speech.clearRect(0,0,canvas.width,canvas.height);
+          speech.fillText("Knuckles: To prevent the Ligma fruit from falling into the wrong hands.",15,50)
+        }
+        else if (times==37)
+        {
+          speech.clearRect(0,0,canvas.width,canvas.height);
+          speech.fillText("Knuckles: You say you seek the Ligma fruit, yes?", 150,50);
+        }
+        else if (times==38)
+        {
+          speech.clearRect(0,0,canvas.width,canvas.height);
+          speech.fillText("Knuckles: You will then have to answer a question.",100,50)
+        }
+        else if (times==39)
+        {
+          speech.clearRect(0,0,canvas.width,canvas.height);
+          speech.fillText("Knuckles: Failure will result in death.",200,50)
+        }
+        else if (times==40)
+        {
+          if (confirm("Answer the question?"))
+          {
+            times++;
+            times++;
+            speech.clearRect(0,0,canvas.width, canvas.height);
+            speech.fillText("Knuckles: Alright then, here's your question.", 150,50);
+          }
+          else
+          {
+            times++;
+            noanswer++;
+            speech.clearRect(0,0,canvas.width, canvas.height);
+            speech.fillText("Knuckles: Well that was anticlimactic.", 200,50);
+          }
+        }
+        else if (times==43)
+        {
+          if (confirm("Do you know Candice?"))
+          {
+            times++;
+            pass++;
+            speech.clearRect(0,0,canvas.width,canvas.height);
+            speech.fillText("You: Yes...?", 300,50);
+          }
+          else 
+          {
+            times++;
+            fail++;
+            speech.clearRect(0,0,canvas.width,canvas.height);
+            speech.fillText("You: No...?", 300,50);
+          }
+        }
+        else if (times==48)
+        {
+          speech.clearRect(0,0,canvas.width,canvas.height);
+          speech.fillText("Knuckles: It seems, you ARE worthy.", 200,50);
+        }
+        else if (times==49)
+        {
+          speech.clearRect(0,0,canvas.width,canvas.height);
+          speech.fillText("Knuckles: Well, as promised, here's a Ligma fruit.", 100,50);
+        }
+        else if (times==50)
+        {
+          speech.clearRect(0,0,canvas.width,canvas.height);
+          speech.fillText("Knuckles places a weird-looking fruit into your hand.", 80,50);
+        }
+        else if (times==51)
+        {
+          speech.clearRect(0,0,canvas.width,canvas.height);
+          speech.fillText("You: Thanks!", 300,50);
+        }
+        else if (times==52)
+        {
+          document.body.style.background = "url('https://wallpapercave.com/wp/wp4720658.jpg')";
+          document.body.style.backgroundSize = "100% 100%";
+          ctx.clearRect(0,0,canvas.width,canvas.height);
+          ctx.drawImage(shrek,350,0,550,550);
+          speech.clearRect(0,0,canvas.width,canvas.height);
+          speech.fillText("You meet Shrek after school the next day.", 200,50);
+        }
+        else if (times==53)
+        {
+          speech.clearRect(0,0,canvas.width,canvas.height);
+          speech.fillText("You: Senpai! I found the Ligma fruit!", 220,50);
+        }
+        else if (times==54)
+        {
+          speech.clearRect(0,0,canvas.width,canvas.height);
+          speech.fillText("Shrek: I knew you could do it!!", 250,50);
+        }
+        else if (times==55)
+        {
+          speech.clearRect(0,0,canvas.width,canvas.height);
+          speech.fillText("You give the Ligma fruit to Shrek.", 220,50);
+        }
+        else if (times==56)
+        {
+          speech.clearRect(0,0,canvas.width,canvas.height);
+          speech.fillText("Shrek eats the Ligma fruit.", 250,50);
+        }
+        else if (times==57)
+        {
+          speech.clearRect(0,0,canvas.width,canvas.height);
+          speech.fillText("Shrek begins to change!", 270,50);
+        }
+        else if (times==58)
+        {
+          ctx.clearRect(0,0,canvas.width,canvas.height);
+          ctx.drawImage(explosion,350,0,550,550);
+          speech.clearRect(0,0,canvas.width,canvas.height);
+          speech.fillText("You: SENPAII!!!", 300,50);
+        }
+        else if (times==59)
+        {
+          speech.clearRect(0,0,canvas.width,canvas.height);
+          speech.fillText("Shrek: It's alright, I'm fine!", 250,50);
+        }
+        else if (times==60)
+        {
+          speech.clearRect(0,0,canvas.width, canvas.height);
+          speech.fillText("The smoke begins to clear, and you see that Shrek has changed!", 45,50);
+        }
+        else if (times==61)
+        {
+          document.body.style.background = "url('https://c.tenor.com/Cbm8FdN4tbAAAAAC/sailor-moon-suit-old-man.gif')";
+          document.body.style.backgroundSize = "100% 100%";
+          ctx.clearRect(0,0,canvas.width,canvas.height);
+          speech.clearRect(0,0,canvas.width, canvas.height);
+          speech.fillText("Shrek: This is my human form!", 250,50);
+        }
+        else if (times==62)
+        {
+          speech.clearRect(0,0,canvas.width, canvas.height);
+          speech.fillText("Shrek: Shall we go on a date now?", 230,50);
+        }
+        else if (times==63)
+        {
+          speech.clearRect(0,0,canvas.width, canvas.height);
+          speech.fillText("You: wtf", 350,50);
+        }
+        else if (times==64)
+        {
+          times = 1000;
+          speech.clearRect(0,0,canvas.width, canvas.height);
+          speech.fillText("~~Game Over~~", 350,50);
+        }
+        else if (times>=1000) 
+        {
+          speech.clearRect(0,0,canvas.width, canvas.height);
+          if (noanswer==1)
+          {
+            speech.fillText("~~Bruh~~", 360,50);
+          }
+          else 
+          {
+            speech.fillText("~~Game Over~~", 350,50);
+          }
+        }
+      }
+    }
+  } 
+}
+function nohelp()
+{
+  if (times==23)
+  {
+    speech.clearRect(0,0,canvas.width, canvas.height);
+    speech.fillText("Shrek: Oh. Okay then.", 300,50);
+  }
+  else if (times==24)
+  {
+    speech.clearRect(0,0,canvas.width, canvas.height);
+    speech.fillText("From that day on, senpai no longer talked to me.", 150,50);
+  }
+  else if (times==25)
+  {
+    times = 1000;
+  }
+}
+function dontanswer()
+{
+  times=1000;
+}
+function failed()
+{
+  if (times==45)
+  {
+    speech.clearRect(0,0,canvas.width, canvas.height);
+    speech.fillText("Knuckles: CANDEEZ NUTS FIT IN YO MOUTH", 200,50);
+  }
+  else if (times==46)
+  {
+    speech.clearRect(0,0,canvas.width, canvas.height);
+    speech.fillText("You died from the cringe of a deez nuts joke.", 150,50);
+  }
+  else if (times==47)
+  {
+    times = 1000;
+  }
+}
+function passed()
+{
+  if (times==45)
+  {
+    times = times+3;
+  }
+}
+function update()
+{
+  times++;
+  if (dont==1)
+  {
+    const myTimeout = setInterval(nohelp,100);
+  }
+  else if (noanswer==1)
+  {
+    const myTimeout = setInterval(dontanswer,100);
+  }
+  else if (fail==1)
+  {
+    const myTimeout = setInterval(failed, 100);
+  }
+  else if (pass==1)
+  {
+    const myTimeout = setInterval(passed, 100);
+  }
+}
+</script>
+</body>
+</html>
