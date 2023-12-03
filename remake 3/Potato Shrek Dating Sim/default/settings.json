@@ -1,0 +1,53 @@
+{
+    "ScreenWidth": 900,
+    "ScreenHeight": 600,
+    "FPS": 300,
+    
+    "TextSpeed": 50,
+    "Margin": 10,
+    "FontSize": 20,
+    
+    "DefaultOutline": 3,
+    "NameBoxOutline": 2,
+    
+    "BGR": 255, 
+    "BGG": 255,
+    "BGB": 255,
+    
+    "TCR": 0, 
+    "TCG": 0,
+    "TCB": 0,
+    
+    "SBR": 0, 
+    "SBG": 0,
+    "SBB": 0,
+
+    "DBW": 0.8,
+    "DBH": 0.4,
+
+    "NBW": 0.3,
+    "NBH": 0.2,
+
+    "DBYMargin": 10,
+    "NBXMargin": 20,
+
+    "CharacterFrameRate": 10,
+
+    "CharacterFadeRate": 20,
+    "CharacterFadeSpeed": 0.05,
+    "CharacterSlideRate": 1,
+    "CharacterSlideSpeed": 5,
+
+    "TransitionRate": 30,
+    "TransitionFadeInOutSpeed": 0.05,
+    "TransitionPopSpeed": 0.05,
+    "TransitionSlideSpeed": 20,
+
+    "StartScreenFontSize": 50,
+    "EndScreenFontSize": 10,
+
+    "StartButtonWidth": 7,
+    "StartButtonHeight": 10,
+
+    "ChoiceFontSize": 20
+}
