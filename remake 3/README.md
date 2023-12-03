@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="image.jpg" width=600 height=300 />
+  <img src="image.jpg" width=600 height=400 />
 </p>
   
 Probably my first proper C++ project.  
