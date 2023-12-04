@@ -3,4 +3,4 @@
 </p>
   
 Probably my first proper C++ project.  
-Figured I'd write a visual novel framework using SDL, and remake the game again.  
+Figured I'd write a [visual novel framework](https://github.com/WAP-Industries/potato) using SDL, and remake the game again.  
